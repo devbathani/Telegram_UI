@@ -60,6 +60,21 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - icons/menu.png
+    - images/4bit.jpeg
+    - images/datavision.jpeg
+    - images/dsa.jpeg
+    - images/figma.jpeg
+    - images/flutter.jpeg
+    - images/flutter_mumbai.jpeg
+    - images/python.jpeg
+    - images/python_pu.jpeg
+    - images/reboot.jpeg
+    - images/virus.jpeg
+    - images/web.jpeg
+    - images/world chat.jpeg
+    - images/tele.jpeg
+    - images/tele_bot.jpeg
+    - icons/pen.png
  
 
   # An image asset can refer to one or more resolution-specific "variants", see
