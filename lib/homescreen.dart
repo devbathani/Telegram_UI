@@ -13,69 +13,69 @@ class HomeScreen extends StatelessWidget {
 
   List<Telegram> telegram = [
     Telegram(
-      community: Slidable(
-        actionPane: SlidableStrechActionPane(),
-        actionExtentRatio: 0.40,
-        actions: [
-          Container(
-            height: 70,
-            width: 15,
-            color: Color(0xff5ea3de),
-            child: Center(
-              child: Column(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.archive,
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                  ),
-                  const Text(
-                    "Archive",
-                    style: TextStyle(
+      community: Container(
+        color: const Color(0xff1d2733),
+        height: 68,
+        width: 250,
+        child: Slidable(
+          actionPane: SlidableStrechActionPane(),
+          actionExtentRatio: 0.40,
+          actions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Color(0xff5ea3de),
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.archive,
+                        size: 30,
                         color: Colors.white,
-                        fontSize: 13,
-                        fontWeight: FontWeight.bold),
-                  )
-                ],
+                      ),
+                    ),
+                    const Text(
+                      "Archive",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
-        // secondaryActions: [
-        //   Container(
-        //     height: 70,
-        //     width: 15,
-        //     color: Colors.red,
-        //     child: Center(
-        //       child: Column(
-        //         children: [
-        //           IconButton(
-        //             onPressed: () {},
-        //             icon: const Icon(
-        //               Icons.delete,
-        //               size: 30,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //           const Text(
-        //             "Delete",
-        //             style: TextStyle(
-        //                 color: Colors.white,
-        //                 fontSize: 13,
-        //                 fontWeight: FontWeight.bold),
-        //           )
-        //         ],
-        //       ),
-        //     ),
-        //   ),
-        // ],
-        child: Container(
-          color: const Color(0xff1d2733),
-          height: 68,
-          width: 250,
+          ],
+          secondaryActions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Colors.red,
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.delete,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Delete",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
           child: Row(
             children: [
               Padding(
@@ -167,178 +167,148 @@ class HomeScreen extends StatelessWidget {
         color: const Color(0xff1d2733),
         height: 68,
         width: 250,
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                  image: const DecorationImage(
-                    image: AssetImage('images/reboot.jpeg'),
-                    fit: BoxFit.cover,
-                  ),
+        child: Slidable(
+          actionPane: SlidableStrechActionPane(),
+          actionExtentRatio: 0.40,
+          actions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Color(0xff5ea3de),
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.archive,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Archive",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
                 ),
               ),
             ),
+          ],
+          secondaryActions: [
             Container(
-              decoration: const BoxDecoration(
-                border:
-                    Border(bottom: BorderSide(color: Colors.black, width: 0.2)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 11),
+              height: 70,
+              width: 15,
+              color: Colors.red,
+              child: Center(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: const [
-                        Text(
-                          "Reboot13_chat",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 126,
-                        ),
-                        Text(
-                          "13:00 PM",
-                          style: TextStyle(color: Colors.grey, fontSize: 12),
-                        )
-                      ],
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.delete,
+                        size: 30,
+                        color: Colors.white,
+                      ),
                     ),
-                    const SizedBox(
-                      height: 8.5,
+                    const Text(
+                      "Delete",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(35),
+                    image: const DecorationImage(
+                      image: AssetImage('images/reboot.jpeg'),
+                      fit: BoxFit.cover,
                     ),
-                    Row(
-                      children: [
-                        const Text(
-                          "Welcome to Reboot13_chat community",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 40,
-                        ),
-                        Container(
-                          height: 18,
-                          width: 20,
-                          decoration: BoxDecoration(
-                            color: Color(0xff63b4f2),
-                            borderRadius: BorderRadius.circular(35),
-                          ),
-                          child: const Center(
-                              child: Text(
-                            "10",
+                  ),
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.2)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            "Reboot13_chat",
                             style: TextStyle(
-                                fontSize: 11,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          )),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    ),
-    Telegram(
-      community: Container(
-        color: const Color(0xff1d2733),
-        height: 68,
-        width: 250,
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                  image: const DecorationImage(
-                    image: AssetImage('images/4bit.jpeg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                border:
-                    Border(bottom: BorderSide(color: Colors.black, width: 0.2)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 11),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: const [
-                        Text(
-                          "4bit-Code",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 166,
-                        ),
-                        Text(
-                          "20:30 PM",
-                          style: TextStyle(color: Colors.grey, fontSize: 12),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 8.5,
-                    ),
-                    Row(
-                      children: [
-                        const Text(
-                          "Hey Folks welcome to the 4bit-Code",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
                           ),
-                        ),
-                        const SizedBox(
-                          width: 60,
-                        ),
-                        Container(
-                          height: 18,
-                          width: 20,
-                          decoration: BoxDecoration(
-                            color: Color(0xff63b4f2),
-                            borderRadius: BorderRadius.circular(35),
+                          SizedBox(
+                            width: 126,
                           ),
-                          child: const Center(
-                              child: Text(
-                            "15",
+                          Text(
+                            "13:00 PM",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8.5,
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            "Welcome to Reboot13_chat community",
                             style: TextStyle(
-                                fontSize: 11,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          )),
-                        ),
-                      ],
-                    )
-                  ],
+                              color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 40,
+                          ),
+                          Container(
+                            height: 18,
+                            width: 20,
+                            decoration: BoxDecoration(
+                              color: Color(0xff63b4f2),
+                              borderRadius: BorderRadius.circular(35),
+                            ),
+                            child: const Center(
+                                child: Text(
+                              "10",
+                              style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     ),
@@ -347,358 +317,148 @@ class HomeScreen extends StatelessWidget {
         color: const Color(0xff1d2733),
         height: 68,
         width: 250,
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                  image: const DecorationImage(
-                    image: AssetImage('images/flutter.jpeg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
+        child: Slidable(
+          actionPane: SlidableStrechActionPane(),
+          actionExtentRatio: 0.40,
+          actions: [
             Container(
-              decoration: const BoxDecoration(
-                border:
-                    Border(bottom: BorderSide(color: Colors.black, width: 0.2)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 11),
+              height: 70,
+              width: 15,
+              color: Color(0xff5ea3de),
+              child: Center(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: const [
-                        Text(
-                          "Flutter.dev",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 160,
-                        ),
-                        Text(
-                          "15:30 PM",
-                          style: TextStyle(color: Colors.grey, fontSize: 12),
-                        )
-                      ],
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.archive,
+                        size: 30,
+                        color: Colors.white,
+                      ),
                     ),
-                    const SizedBox(
-                      height: 8.5,
-                    ),
-                    Row(
-                      children: const [
-                        Text(
-                          "Hii Dev Bathani Welcome to Flutter.dev ",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 40,
-                        ),
-                        // Container(
-                        //   height: 18,
-                        //   width: 18,
-                        //   decoration: BoxDecoration(
-                        //     color: Color(0xff63b4f2),
-                        //     borderRadius: BorderRadius.circular(35),
-                        //   ),
-                        //   // child: const Center(
-                        //   //     child: Text(
-                        //   //   "1",
-                        //   //   style: TextStyle(
-                        //   //       fontSize: 13,
-                        //   //       fontWeight: FontWeight.bold,
-                        //   //       color: Colors.white),
-                        //   // )),
-                        // ),
-                      ],
+                    const Text(
+                      "Archive",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
               ),
             ),
           ],
-        ),
-      ),
-    ),
-    Telegram(
-      community: Container(
-        color: const Color(0xff1d2733),
-        height: 68,
-        width: 250,
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                  image: const DecorationImage(
-                    image: AssetImage('images/flutter_mumbai.jpeg'),
-                    fit: BoxFit.cover,
-                  ),
+          secondaryActions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Colors.red,
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.delete,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Delete",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
                 ),
               ),
             ),
-            Container(
-              decoration: const BoxDecoration(
-                border:
-                    Border(bottom: BorderSide(color: Colors.black, width: 0.2)),
+          ],
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(35),
+                    image: const DecorationImage(
+                      image: AssetImage('images/4bit.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
               ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 11),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: const [
-                        Text(
-                          "Flutter Mumbai",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 127,
-                        ),
-                        Text(
-                          "10:00 AM",
-                          style: TextStyle(color: Colors.grey, fontSize: 12),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 8.5,
-                    ),
-                    Row(
-                      children: [
-                        const Text(
-                          "Hii Dev Bathani Welcome to Flutter Mumbai",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 23,
-                        ),
-                        Container(
-                          height: 18,
-                          width: 18,
-                          decoration: BoxDecoration(
-                            color: Color(0xff63b4f2),
-                            borderRadius: BorderRadius.circular(35),
-                          ),
-                          child: const Center(
-                              child: Text(
-                            "1",
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.2)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            "4bit-Code",
                             style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          )),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    ),
-    Telegram(
-      community: Container(
-        color: const Color(0xff1d2733),
-        height: 68,
-        width: 250,
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                  image: const DecorationImage(
-                    image: AssetImage('images/tele.jpeg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                border:
-                    Border(bottom: BorderSide(color: Colors.black, width: 0.2)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 11),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: const [
-                        Text(
-                          "Telegram",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 170,
-                        ),
-                        Text(
-                          "7:30 AM",
-                          style: TextStyle(color: Colors.grey, fontSize: 12),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 8.5,
-                    ),
-                    Row(
-                      children: const [
-                        Text(
-                          "Hii Dev Bathani Welcome to Telegram",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
                           ),
-                        ),
-                        SizedBox(
-                          width: 60,
-                        ),
-                        // Container(
-                        //   height: 18,
-                        //   width: 18,
-                        //   decoration: BoxDecoration(
-                        //     color: Color(0xff63b4f2),
-                        //     borderRadius: BorderRadius.circular(35),
-                        //   ),
-                        //   // child: const Center(
-                        //   //     child: Text(
-                        //   //   "1",
-                        //   //   style: TextStyle(
-                        //   //       fontSize: 13,
-                        //   //       fontWeight: FontWeight.bold,
-                        //   //       color: Colors.white),
-                        //   // )),
-                        // ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    ),
-    Telegram(
-      community: Container(
-        color: const Color(0xff1d2733),
-        height: 68,
-        width: 250,
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                  image: const DecorationImage(
-                    image: AssetImage('images/tele_bot.jpeg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                border:
-                    Border(bottom: BorderSide(color: Colors.black, width: 0.2)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 11),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: const [
-                        Text(
-                          "Telegram Bot",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 145,
-                        ),
-                        Text(
-                          "5:30 AM",
-                          style: TextStyle(color: Colors.grey, fontSize: 12),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 8.5,
-                    ),
-                    Row(
-                      children: [
-                        const Text(
-                          "Hii Dev Bathani how can i help you ?",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
+                          SizedBox(
+                            width: 166,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 65,
-                        ),
-                        Container(
-                          height: 18,
-                          width: 18,
-                          decoration: BoxDecoration(
-                            color: Color(0xff63b4f2),
-                            borderRadius: BorderRadius.circular(35),
-                          ),
-                          child: const Center(
-                              child: Text(
-                            "1",
+                          Text(
+                            "20:30 PM",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8.5,
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            "Hey Folks welcome to the 4bit-Code",
                             style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          )),
-                        ),
-                      ],
-                    )
-                  ],
+                              color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 60,
+                          ),
+                          Container(
+                            height: 18,
+                            width: 20,
+                            decoration: BoxDecoration(
+                              color: Color(0xff63b4f2),
+                              borderRadius: BorderRadius.circular(35),
+                            ),
+                            child: const Center(
+                                child: Text(
+                              "15",
+                              style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     ),
@@ -707,88 +467,148 @@ class HomeScreen extends StatelessWidget {
         color: const Color(0xff1d2733),
         height: 68,
         width: 250,
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                  image: const DecorationImage(
-                    image: AssetImage('images/world chat.jpeg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
+        child: Slidable(
+          actionPane: SlidableStrechActionPane(),
+          actionExtentRatio: 0.40,
+          actions: [
             Container(
-              decoration: const BoxDecoration(
-                border:
-                    Border(bottom: BorderSide(color: Colors.black, width: 0.2)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 11),
+              height: 70,
+              width: 15,
+              color: Color(0xff5ea3de),
+              child: Center(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: const [
-                        Text(
-                          "WORLD CHAT",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 138,
-                        ),
-                        Text(
-                          "16:30 PM",
-                          style: TextStyle(color: Colors.grey, fontSize: 12),
-                        )
-                      ],
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.archive,
+                        size: 30,
+                        color: Colors.white,
+                      ),
                     ),
-                    const SizedBox(
-                      height: 8.5,
-                    ),
-                    Row(
-                      children: [
-                        const Text(
-                          "Hii Dev Bathani Welcome to WORLD CHAT",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 25,
-                        ),
-                        Container(
-                          height: 18,
-                          width: 27,
-                          decoration: BoxDecoration(
-                            color: Color(0xff63b4f2),
-                            borderRadius: BorderRadius.circular(35),
-                          ),
-                          child: const Center(
-                              child: Text(
-                            "1000",
-                            style: TextStyle(
-                                fontSize: 8.5,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          )),
-                        ),
-                      ],
+                    const Text(
+                      "Archive",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
               ),
             ),
           ],
+          secondaryActions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Colors.red,
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.delete,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Delete",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(35),
+                    image: const DecorationImage(
+                      image: AssetImage('images/flutter.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.2)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            "Flutter.dev",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 160,
+                          ),
+                          Text(
+                            "15:30 PM",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8.5,
+                      ),
+                      Row(
+                        children: const [
+                          Text(
+                            "Hii Dev Bathani Welcome to Flutter.dev ",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 40,
+                          ),
+                          // Container(
+                          //   height: 18,
+                          //   width: 18,
+                          //   decoration: BoxDecoration(
+                          //     color: Color(0xff63b4f2),
+                          //     borderRadius: BorderRadius.circular(35),
+                          //   ),
+                          //   // child: const Center(
+                          //   //     child: Text(
+                          //   //   "1",
+                          //   //   style: TextStyle(
+                          //   //       fontSize: 13,
+                          //   //       fontWeight: FontWeight.bold,
+                          //   //       color: Colors.white),
+                          //   // )),
+                          // ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     ),
@@ -797,88 +617,148 @@ class HomeScreen extends StatelessWidget {
         color: const Color(0xff1d2733),
         height: 68,
         width: 250,
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                  image: const DecorationImage(
-                    image: AssetImage('images/python.jpeg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
+        child: Slidable(
+          actionPane: SlidableStrechActionPane(),
+          actionExtentRatio: 0.40,
+          actions: [
             Container(
-              decoration: const BoxDecoration(
-                border:
-                    Border(bottom: BorderSide(color: Colors.black, width: 0.2)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 11),
+              height: 70,
+              width: 15,
+              color: Color(0xff5ea3de),
+              child: Center(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: const [
-                        Text(
-                          "Python Community",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 107,
-                        ),
-                        Text(
-                          "9:30 AM",
-                          style: TextStyle(color: Colors.grey, fontSize: 12),
-                        )
-                      ],
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.archive,
+                        size: 30,
+                        color: Colors.white,
+                      ),
                     ),
-                    const SizedBox(
-                      height: 8.5,
-                    ),
-                    Row(
-                      children: [
-                        const Text(
-                          "Hii Dev Bathani Welcome to Python community",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 8,
-                        ),
-                        Container(
-                          height: 18,
-                          width: 18,
-                          decoration: BoxDecoration(
-                            color: Color(0xff63b4f2),
-                            borderRadius: BorderRadius.circular(35),
-                          ),
-                          child: const Center(
-                              child: Text(
-                            "1",
-                            style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          )),
-                        ),
-                      ],
+                    const Text(
+                      "Archive",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
               ),
             ),
           ],
+          secondaryActions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Colors.red,
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.delete,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Delete",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(35),
+                    image: const DecorationImage(
+                      image: AssetImage('images/flutter_mumbai.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.2)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            "Flutter Mumbai",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 127,
+                          ),
+                          Text(
+                            "10:00 AM",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8.5,
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            "Hii Dev Bathani Welcome to Flutter Mumbai",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 23,
+                          ),
+                          Container(
+                            height: 18,
+                            width: 18,
+                            decoration: BoxDecoration(
+                              color: Color(0xff63b4f2),
+                              borderRadius: BorderRadius.circular(35),
+                            ),
+                            child: const Center(
+                                child: Text(
+                              "1",
+                              style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     ),
@@ -887,88 +767,148 @@ class HomeScreen extends StatelessWidget {
         color: const Color(0xff1d2733),
         height: 68,
         width: 250,
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                  image: const DecorationImage(
-                    image: AssetImage('images/python_pu.jpeg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
+        child: Slidable(
+          actionPane: SlidableStrechActionPane(),
+          actionExtentRatio: 0.40,
+          actions: [
             Container(
-              decoration: const BoxDecoration(
-                border:
-                    Border(bottom: BorderSide(color: Colors.black, width: 0.2)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 11),
+              height: 70,
+              width: 15,
+              color: Color(0xff5ea3de),
+              child: Center(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: const [
-                        Text(
-                          "Python Post",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 155,
-                        ),
-                        Text(
-                          "5:30 AM",
-                          style: TextStyle(color: Colors.grey, fontSize: 12),
-                        )
-                      ],
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.archive,
+                        size: 30,
+                        color: Colors.white,
+                      ),
                     ),
-                    const SizedBox(
-                      height: 8.5,
-                    ),
-                    Row(
-                      children: [
-                        const Text(
-                          "Hii Dev Bathani Welcome to Python post ",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 41,
-                        ),
-                        Container(
-                          height: 18,
-                          width: 20,
-                          decoration: BoxDecoration(
-                            color: Color(0xff63b4f2),
-                            borderRadius: BorderRadius.circular(35),
-                          ),
-                          child: const Center(
-                              child: Text(
-                            "10",
-                            style: TextStyle(
-                                fontSize: 11,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          )),
-                        ),
-                      ],
+                    const Text(
+                      "Archive",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
               ),
             ),
           ],
+          secondaryActions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Colors.red,
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.delete,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Delete",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(35),
+                    image: const DecorationImage(
+                      image: AssetImage('images/tele.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.2)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            "Telegram",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 170,
+                          ),
+                          Text(
+                            "7:30 AM",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8.5,
+                      ),
+                      Row(
+                        children: const [
+                          Text(
+                            "Hii Dev Bathani Welcome to Telegram",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 60,
+                          ),
+                          // Container(
+                          //   height: 18,
+                          //   width: 18,
+                          //   decoration: BoxDecoration(
+                          //     color: Color(0xff63b4f2),
+                          //     borderRadius: BorderRadius.circular(35),
+                          //   ),
+                          //   // child: const Center(
+                          //   //     child: Text(
+                          //   //   "1",
+                          //   //   style: TextStyle(
+                          //   //       fontSize: 13,
+                          //   //       fontWeight: FontWeight.bold,
+                          //   //       color: Colors.white),
+                          //   // )),
+                          // ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     ),
@@ -977,88 +917,748 @@ class HomeScreen extends StatelessWidget {
         color: const Color(0xff1d2733),
         height: 68,
         width: 250,
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                  image: const DecorationImage(
-                    image: AssetImage('images/figma.jpeg'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
+        child: Slidable(
+          actionPane: SlidableStrechActionPane(),
+          actionExtentRatio: 0.40,
+          actions: [
             Container(
-              decoration: const BoxDecoration(
-                border:
-                    Border(bottom: BorderSide(color: Colors.black, width: 0.2)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 11),
+              height: 70,
+              width: 15,
+              color: Color(0xff5ea3de),
+              child: Center(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: const [
-                        Text(
-                          "Figma",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 188,
-                        ),
-                        Text(
-                          "21:30 PM",
-                          style: TextStyle(color: Colors.grey, fontSize: 12),
-                        )
-                      ],
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.archive,
+                        size: 30,
+                        color: Colors.white,
+                      ),
                     ),
-                    const SizedBox(
-                      height: 8.5,
-                    ),
-                    Row(
-                      children: [
-                        const Text(
-                          "Hii Dev Bathani Welcome to Figma ",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 65,
-                        ),
-                        Container(
-                          height: 18,
-                          width: 25,
-                          decoration: BoxDecoration(
-                            color: Color(0xff63b4f2),
-                            borderRadius: BorderRadius.circular(35),
-                          ),
-                          child: const Center(
-                              child: Text(
-                            "100",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          )),
-                        ),
-                      ],
+                    const Text(
+                      "Archive",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
               ),
             ),
           ],
+          secondaryActions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Colors.red,
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.delete,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Delete",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(35),
+                    image: const DecorationImage(
+                      image: AssetImage('images/tele_bot.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.2)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            "Telegram Bot",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 145,
+                          ),
+                          Text(
+                            "5:30 AM",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8.5,
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            "Hii Dev Bathani how can i help you ?",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 65,
+                          ),
+                          Container(
+                            height: 18,
+                            width: 18,
+                            decoration: BoxDecoration(
+                              color: Color(0xff63b4f2),
+                              borderRadius: BorderRadius.circular(35),
+                            ),
+                            child: const Center(
+                                child: Text(
+                              "1",
+                              style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+    Telegram(
+      community: Container(
+        color: const Color(0xff1d2733),
+        height: 68,
+        width: 250,
+        child: Slidable(
+          actionPane: SlidableStrechActionPane(),
+          actionExtentRatio: 0.40,
+          actions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Color(0xff5ea3de),
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.archive,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Archive",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          secondaryActions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Colors.red,
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.delete,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Delete",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(35),
+                    image: const DecorationImage(
+                      image: AssetImage('images/world chat.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.2)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            "WORLD CHAT",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 138,
+                          ),
+                          Text(
+                            "16:30 PM",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8.5,
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            "Hii Dev Bathani Welcome to WORLD CHAT",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 25,
+                          ),
+                          Container(
+                            height: 18,
+                            width: 27,
+                            decoration: BoxDecoration(
+                              color: Color(0xff63b4f2),
+                              borderRadius: BorderRadius.circular(35),
+                            ),
+                            child: const Center(
+                                child: Text(
+                              "1000",
+                              style: TextStyle(
+                                  fontSize: 8.5,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+    Telegram(
+      community: Container(
+        color: const Color(0xff1d2733),
+        height: 68,
+        width: 250,
+        child: Slidable(
+          actionPane: SlidableStrechActionPane(),
+          actionExtentRatio: 0.40,
+          actions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Color(0xff5ea3de),
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.archive,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Archive",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          secondaryActions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Colors.red,
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.delete,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Delete",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(35),
+                    image: const DecorationImage(
+                      image: AssetImage('images/python.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.2)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            "Python Community",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 107,
+                          ),
+                          Text(
+                            "9:30 AM",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8.5,
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            "Hii Dev Bathani Welcome to Python community",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 8,
+                          ),
+                          Container(
+                            height: 18,
+                            width: 18,
+                            decoration: BoxDecoration(
+                              color: Color(0xff63b4f2),
+                              borderRadius: BorderRadius.circular(35),
+                            ),
+                            child: const Center(
+                                child: Text(
+                              "1",
+                              style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+    Telegram(
+      community: Container(
+        color: const Color(0xff1d2733),
+        height: 68,
+        width: 250,
+        child: Slidable(
+          actionPane: SlidableStrechActionPane(),
+          actionExtentRatio: 0.40,
+          actions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Color(0xff5ea3de),
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.archive,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Archive",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          secondaryActions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Colors.red,
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.delete,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Delete",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(35),
+                    image: const DecorationImage(
+                      image: AssetImage('images/python_pu.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.2)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            "Python Post",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 155,
+                          ),
+                          Text(
+                            "5:30 AM",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8.5,
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            "Hii Dev Bathani Welcome to Python post ",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 41,
+                          ),
+                          Container(
+                            height: 18,
+                            width: 20,
+                            decoration: BoxDecoration(
+                              color: Color(0xff63b4f2),
+                              borderRadius: BorderRadius.circular(35),
+                            ),
+                            child: const Center(
+                                child: Text(
+                              "10",
+                              style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+    Telegram(
+      community: Container(
+        color: const Color(0xff1d2733),
+        height: 68,
+        width: 250,
+        child: Slidable(
+          actionPane: SlidableStrechActionPane(),
+          actionExtentRatio: 0.40,
+          actions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Color(0xff5ea3de),
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.archive,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Archive",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          secondaryActions: [
+            Container(
+              height: 70,
+              width: 15,
+              color: Colors.red,
+              child: Center(
+                child: Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.delete,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Text(
+                      "Delete",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(35),
+                    image: const DecorationImage(
+                      image: AssetImage('images/figma.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.2)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            "Figma",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 188,
+                          ),
+                          Text(
+                            "21:30 PM",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8.5,
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            "Hii Dev Bathani Welcome to Figma ",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 65,
+                          ),
+                          Container(
+                            height: 18,
+                            width: 25,
+                            decoration: BoxDecoration(
+                              color: Color(0xff63b4f2),
+                              borderRadius: BorderRadius.circular(35),
+                            ),
+                            child: const Center(
+                                child: Text(
+                              "100",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     ),
@@ -1107,6 +1707,7 @@ class HomeScreen extends StatelessWidget {
         onRefresh: _handleRefresh,
         color: Color(0xff212d3b),
         height: 100,
+        borderWidth: 2.0,
         showChildOpacityTransition: false,
         backgroundColor: Color(0xff5ea3de),
         child: ListView.builder(
@@ -1129,39 +1730,39 @@ class HomeScreen extends StatelessWidget {
           SpeedDialChild(
               backgroundColor: Color(0xff1d2733),
               labelBackgroundColor: Color(0xff5ea3de),
-              child: Icon(
+              child: const Icon(
                 Icons.people_alt_sharp,
                 color: Colors.white,
                 size: 15,
               ),
               label: 'New Group',
-              labelStyle: TextStyle(
+              labelStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   fontSize: 14)),
           SpeedDialChild(
               backgroundColor: Color(0xff1d2733),
               labelBackgroundColor: Color(0xff5ea3de),
-              child: Icon(
+              child: const Icon(
                 Icons.lock,
                 color: Colors.white,
                 size: 15,
               ),
               label: 'New Secret Chat',
-              labelStyle: TextStyle(
+              labelStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   fontSize: 14)),
           SpeedDialChild(
               backgroundColor: Color(0xff1d2733),
-              child: Icon(
+              child: const Icon(
                 Icons.next_week_rounded,
                 color: Colors.white,
                 size: 15,
               ),
               labelBackgroundColor: Color(0xff5ea3de),
               label: 'New Channel',
-              labelStyle: TextStyle(
+              labelStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   fontSize: 14)),
