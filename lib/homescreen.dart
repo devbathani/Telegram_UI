@@ -1,98 +1,164 @@
 import 'package:flutter/material.dart';
-//1d2733
 import 'model.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
 
+  Future<void> _handleRefresh() async {
+    return await Future.delayed(Duration(seconds: 2));
+  }
+
   List<Telegram> telegram = [
     Telegram(
-      community: Container(
-        color: const Color(0xff1d2733),
-        height: 68,
-        width: 250,
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35),
-                  image: const DecorationImage(
-                    image: AssetImage('images/virus.jpeg'),
-                    fit: BoxFit.cover,
+      community: Slidable(
+        actionPane: SlidableStrechActionPane(),
+        actionExtentRatio: 0.40,
+        actions: [
+          Container(
+            height: 70,
+            width: 15,
+            color: Color(0xff5ea3de),
+            child: Center(
+              child: Column(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.archive,
+                      size: 30,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const Text(
+                    "Archive",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ],
+        // secondaryActions: [
+        //   Container(
+        //     height: 70,
+        //     width: 15,
+        //     color: Colors.red,
+        //     child: Center(
+        //       child: Column(
+        //         children: [
+        //           IconButton(
+        //             onPressed: () {},
+        //             icon: const Icon(
+        //               Icons.delete,
+        //               size: 30,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //           const Text(
+        //             "Delete",
+        //             style: TextStyle(
+        //                 color: Colors.white,
+        //                 fontSize: 13,
+        //                 fontWeight: FontWeight.bold),
+        //           )
+        //         ],
+        //       ),
+        //     ),
+        //   ),
+        // ],
+        child: Container(
+          color: const Color(0xff1d2733),
+          height: 68,
+          width: 250,
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(35),
+                    image: const DecorationImage(
+                      image: AssetImage('images/virus.jpeg'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
-            ),
-            Container(
-              decoration: const BoxDecoration(
-                border:
-                    Border(bottom: BorderSide(color: Colors.black, width: 0.2)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 11),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: const [
-                        Text(
-                          "ViRuS.dev",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: 215,
-                        ),
-                        Text(
-                          "5:30 AM",
-                          style: TextStyle(color: Colors.grey, fontSize: 12),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 8.5,
-                    ),
-                    Row(
-                      children: [
-                        const Text(
-                          "Hii Dev Bathani Welcome to ViRuS.dev community",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 40,
-                        ),
-                        Container(
-                          height: 18,
-                          width: 18,
-                          decoration: BoxDecoration(
-                            color: Color(0xff63b4f2),
-                            borderRadius: BorderRadius.circular(35),
-                          ),
-                          child: const Center(
-                              child: Text(
-                            "1",
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.2)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            "ViRuS.dev",
                             style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          )),
-                        ),
-                      ],
-                    )
-                  ],
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 160,
+                          ),
+                          Text(
+                            "5:30 AM",
+                            style: TextStyle(color: Colors.grey, fontSize: 12),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8.5,
+                      ),
+                      Row(
+                        children: [
+                          const Text(
+                            "Hii Dev Bathani Welcome to ViRuS.dev ",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 40,
+                          ),
+                          Container(
+                            height: 18,
+                            width: 18,
+                            decoration: BoxDecoration(
+                              color: Color(0xff63b4f2),
+                              borderRadius: BorderRadius.circular(35),
+                            ),
+                            child: const Center(
+                                child: Text(
+                              "1",
+                              style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     ),
@@ -137,7 +203,7 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          width: 180,
+                          width: 126,
                         ),
                         Text(
                           "13:00 PM",
@@ -158,7 +224,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          width: 95,
+                          width: 40,
                         ),
                         Container(
                           height: 18,
@@ -171,7 +237,7 @@ class HomeScreen extends StatelessWidget {
                               child: Text(
                             "10",
                             style: TextStyle(
-                                fontSize: 13,
+                                fontSize: 11,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           )),
@@ -227,7 +293,7 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          width: 215,
+                          width: 166,
                         ),
                         Text(
                           "20:30 PM",
@@ -248,7 +314,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          width: 112,
+                          width: 60,
                         ),
                         Container(
                           height: 18,
@@ -261,7 +327,7 @@ class HomeScreen extends StatelessWidget {
                               child: Text(
                             "15",
                             style: TextStyle(
-                                fontSize: 13,
+                                fontSize: 11,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           )),
@@ -317,7 +383,7 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          width: 210,
+                          width: 160,
                         ),
                         Text(
                           "15:30 PM",
@@ -329,33 +395,33 @@ class HomeScreen extends StatelessWidget {
                       height: 8.5,
                     ),
                     Row(
-                      children: [
-                        const Text(
-                          "Hii Dev Bathani Welcome to Flutter.dev community",
+                      children: const [
+                        Text(
+                          "Hii Dev Bathani Welcome to Flutter.dev ",
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12,
                           ),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 40,
                         ),
-                        Container(
-                          height: 18,
-                          width: 18,
-                          decoration: BoxDecoration(
-                            color: Color(0xff63b4f2),
-                            borderRadius: BorderRadius.circular(35),
-                          ),
-                          // child: const Center(
-                          //     child: Text(
-                          //   "1",
-                          //   style: TextStyle(
-                          //       fontSize: 13,
-                          //       fontWeight: FontWeight.bold,
-                          //       color: Colors.white),
-                          // )),
-                        ),
+                        // Container(
+                        //   height: 18,
+                        //   width: 18,
+                        //   decoration: BoxDecoration(
+                        //     color: Color(0xff63b4f2),
+                        //     borderRadius: BorderRadius.circular(35),
+                        //   ),
+                        //   // child: const Center(
+                        //   //     child: Text(
+                        //   //   "1",
+                        //   //   style: TextStyle(
+                        //   //       fontSize: 13,
+                        //   //       fontWeight: FontWeight.bold,
+                        //   //       color: Colors.white),
+                        //   // )),
+                        // ),
                       ],
                     )
                   ],
@@ -407,7 +473,7 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          width: 180,
+                          width: 127,
                         ),
                         Text(
                           "10:00 AM",
@@ -421,14 +487,14 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       children: [
                         const Text(
-                          "Hii Dev Bathani Welcome to Flutter Mumbai commun..",
+                          "Hii Dev Bathani Welcome to Flutter Mumbai",
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12,
                           ),
                         ),
                         const SizedBox(
-                          width: 17,
+                          width: 23,
                         ),
                         Container(
                           height: 18,
@@ -497,7 +563,7 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          width: 224,
+                          width: 170,
                         ),
                         Text(
                           "7:30 AM",
@@ -509,33 +575,33 @@ class HomeScreen extends StatelessWidget {
                       height: 8.5,
                     ),
                     Row(
-                      children: [
-                        const Text(
+                      children: const [
+                        Text(
                           "Hii Dev Bathani Welcome to Telegram",
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12,
                           ),
                         ),
-                        const SizedBox(
-                          width: 105,
+                        SizedBox(
+                          width: 60,
                         ),
-                        Container(
-                          height: 18,
-                          width: 18,
-                          decoration: BoxDecoration(
-                            color: Color(0xff63b4f2),
-                            borderRadius: BorderRadius.circular(35),
-                          ),
-                          // child: const Center(
-                          //     child: Text(
-                          //   "1",
-                          //   style: TextStyle(
-                          //       fontSize: 13,
-                          //       fontWeight: FontWeight.bold,
-                          //       color: Colors.white),
-                          // )),
-                        ),
+                        // Container(
+                        //   height: 18,
+                        //   width: 18,
+                        //   decoration: BoxDecoration(
+                        //     color: Color(0xff63b4f2),
+                        //     borderRadius: BorderRadius.circular(35),
+                        //   ),
+                        //   // child: const Center(
+                        //   //     child: Text(
+                        //   //   "1",
+                        //   //   style: TextStyle(
+                        //   //       fontSize: 13,
+                        //   //       fontWeight: FontWeight.bold,
+                        //   //       color: Colors.white),
+                        //   // )),
+                        // ),
                       ],
                     )
                   ],
@@ -587,7 +653,7 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          width: 198,
+                          width: 145,
                         ),
                         Text(
                           "5:30 AM",
@@ -608,7 +674,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          width: 115,
+                          width: 65,
                         ),
                         Container(
                           height: 18,
@@ -677,7 +743,7 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          width: 190,
+                          width: 138,
                         ),
                         Text(
                           "16:30 PM",
@@ -698,7 +764,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          width: 75,
+                          width: 25,
                         ),
                         Container(
                           height: 18,
@@ -767,7 +833,7 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          width: 160,
+                          width: 107,
                         ),
                         Text(
                           "9:30 AM",
@@ -788,7 +854,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          width: 55,
+                          width: 8,
                         ),
                         Container(
                           height: 18,
@@ -857,7 +923,7 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          width: 207,
+                          width: 155,
                         ),
                         Text(
                           "5:30 AM",
@@ -871,18 +937,18 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       children: [
                         const Text(
-                          "Hii Dev Bathani Welcome to Python post community",
+                          "Hii Dev Bathani Welcome to Python post ",
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12,
                           ),
                         ),
                         const SizedBox(
-                          width: 28,
+                          width: 41,
                         ),
                         Container(
                           height: 18,
-                          width: 18,
+                          width: 20,
                           decoration: BoxDecoration(
                             color: Color(0xff63b4f2),
                             borderRadius: BorderRadius.circular(35),
@@ -891,7 +957,7 @@ class HomeScreen extends StatelessWidget {
                               child: Text(
                             "10",
                             style: TextStyle(
-                                fontSize: 13,
+                                fontSize: 11,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           )),
@@ -947,7 +1013,7 @@ class HomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          width: 241,
+                          width: 188,
                         ),
                         Text(
                           "21:30 PM",
@@ -961,14 +1027,14 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       children: [
                         const Text(
-                          "Hii Dev Bathani Welcome to Figma community",
+                          "Hii Dev Bathani Welcome to Figma ",
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12,
                           ),
                         ),
                         const SizedBox(
-                          width: 55,
+                          width: 65,
                         ),
                         Container(
                           height: 18,
@@ -1037,13 +1103,19 @@ class HomeScreen extends StatelessWidget {
               icon: const Icon(Icons.search, color: Colors.white, size: 23.5))
         ],
       ),
-      body: ListView.builder(
-          itemCount: telegram.length,
-          itemBuilder: (context, index) {
-            return telegram[index].community;
-          }),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+      body: LiquidPullToRefresh(
+        onRefresh: _handleRefresh,
+        color: Color(0xff212d3b),
+        height: 100,
+        showChildOpacityTransition: false,
+        backgroundColor: Color(0xff5ea3de),
+        child: ListView.builder(
+            itemCount: telegram.length,
+            itemBuilder: (context, index) {
+              return telegram[index].community;
+            }),
+      ),
+      floatingActionButton: SpeedDial(
         backgroundColor: Color(0xff5ea3de),
         child: Container(
           height: 25,
@@ -1053,6 +1125,47 @@ class HomeScreen extends StatelessWidget {
             color: Colors.white,
           ),
         ),
+        children: [
+          SpeedDialChild(
+              backgroundColor: Color(0xff1d2733),
+              labelBackgroundColor: Color(0xff5ea3de),
+              child: Icon(
+                Icons.people_alt_sharp,
+                color: Colors.white,
+                size: 15,
+              ),
+              label: 'New Group',
+              labelStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 14)),
+          SpeedDialChild(
+              backgroundColor: Color(0xff1d2733),
+              labelBackgroundColor: Color(0xff5ea3de),
+              child: Icon(
+                Icons.lock,
+                color: Colors.white,
+                size: 15,
+              ),
+              label: 'New Secret Chat',
+              labelStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 14)),
+          SpeedDialChild(
+              backgroundColor: Color(0xff1d2733),
+              child: Icon(
+                Icons.next_week_rounded,
+                color: Colors.white,
+                size: 15,
+              ),
+              labelBackgroundColor: Color(0xff5ea3de),
+              label: 'New Channel',
+              labelStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 14)),
+        ],
       ),
     );
   }
