@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
           actions: [
             Container(
               height: 70,
-              width: 15,
+              width: 15,   
               color: Color(0xff5ea3de),
               child: Center(
                 child: Column(
